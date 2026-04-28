@@ -158,7 +158,8 @@ header {
     background: linear-gradient(135deg, #ff3b3b, #b31212);
     border-radius: 20px;
     padding: 40px;
-    margin: 30px;
+    margin-top: 0;
+    margin-left: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
