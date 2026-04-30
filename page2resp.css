@@ -8,6 +8,7 @@
     z-index: 2000;
     pointer-events: none;
     opacity: 0;
+    display: none;
 
   }
 
@@ -32,6 +33,7 @@
     flex-direction: column;
     text-align: center;
     padding: 25px;
+    margin-left: 0;
   }
 
   .hero-text h1 {
@@ -68,25 +70,65 @@
     margin-bottom: 5px;
   }
 
-.burger {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 3000;
-
-  background: #d61f1f;
-  color: white;
-  border: none;
-  padding: 10px 12px;
-  border-radius: 8px;
-  font-size: 20px;
-}
 
   /* FOOTER */
   .footer {
     left: 0;
     width: 100%;
   }
+
+/* NAVBAR MOBILE BAS */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background: white;
+  border-top: 1px solid #ddd;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 8px 0;
+  z-index: 3000;
+}
+
+/* ITEM */
+.bottom-nav .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #777;
+  cursor: pointer;
+}
+
+/* ICON */
+.bottom-nav i {
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+
+/* ACTIF */
+.bottom-nav .active {
+  color: #d61f1f;
+}
+
+.plan {
+  margin: 20px 10px;
+  padding: 15px;
+}
+
+.plan-container img {
+  width: 100%;
+}
+
+/* espace pour éviter que ça cache le contenu */
+body {
+  padding-bottom: 70px;
+}
 
 }
 

@@ -52,10 +52,11 @@ toggles.forEach((toggle) => {
 const sections = [
   { id: "accueil", nav: ".nav-accueil" },
   { id: "projets", nav: ".nav-projets" },
-  { id: "programme", nav: ".nav-programme" }
+  { id: "programme", nav: ".nav-programme" },
+  { id: "plan", nav: ".nav-plan" }
 ];
 
-const navItems = document.querySelectorAll(".nav li");
+const navItems = document.querySelectorAll(".nav li, .bottom-nav .nav-item");
 
 // SCROLL → active menu
 window.addEventListener("scroll", () => {
@@ -79,23 +80,28 @@ window.addEventListener("scroll", () => {
 
 });
 
-document.querySelector(".nav-accueil").onclick = () => {
-  document.getElementById("accueil").scrollIntoView({ behavior: "smooth" });
-};
+document.querySelectorAll(".nav-accueil").forEach(el => {
+  el.onclick = () => {
+    document.getElementById("accueil").scrollIntoView({ behavior: "smooth" });
+  };
+});
 
-document.querySelector(".nav-projets").onclick = () => {
-  document.getElementById("projets").scrollIntoView({ behavior: "smooth" });
-};
+document.querySelectorAll(".nav-projets").forEach(el => {
+  el.onclick = () => {
+    document.getElementById("projets").scrollIntoView({ behavior: "smooth" });
+  };
+});
 
-document.querySelector(".nav-programme").onclick = () => {
-  document.getElementById("programme").scrollIntoView({ behavior: "smooth" });
-};
+document.querySelectorAll(".nav-programme").forEach(el => {
+  el.onclick = () => {
+    document.getElementById("programme").scrollIntoView({ behavior: "smooth" });
+  };
+});
 
-const burger = document.querySelector(".burger");
-const menu = document.querySelector(".menu");
-
-burger.addEventListener("click", () => {
-  menu.classList.toggle("open");
+document.querySelectorAll(".nav-plan").forEach(el => {
+  el.onclick = () => {
+    document.getElementById("plan").scrollIntoView({ behavior: "smooth" });
+  };
 });
 
 });
