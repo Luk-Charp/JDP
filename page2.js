@@ -48,4 +48,54 @@ toggles.forEach((toggle) => {
     toggle.classList.toggle("ferme");
   });
 });
+
+const sections = [
+  { id: "accueil", nav: ".nav-accueil" },
+  { id: "projets", nav: ".nav-projets" },
+  { id: "programme", nav: ".nav-programme" }
+];
+
+const navItems = document.querySelectorAll(".nav li");
+
+// SCROLL → active menu
+window.addEventListener("scroll", () => {
+
+  let current = "";
+
+  sections.forEach(section => {
+    const element = document.getElementById(section.id);
+    const top = element.offsetTop - 150;
+
+    if (window.scrollY >= top) {
+      current = section.nav;
+    }
+  });
+
+  navItems.forEach(li => li.classList.remove("active"));
+
+  if (current) {
+    document.querySelector(current).classList.add("active");
+  }
+
+});
+
+document.querySelector(".nav-accueil").onclick = () => {
+  document.getElementById("accueil").scrollIntoView({ behavior: "smooth" });
+};
+
+document.querySelector(".nav-projets").onclick = () => {
+  document.getElementById("projets").scrollIntoView({ behavior: "smooth" });
+};
+
+document.querySelector(".nav-programme").onclick = () => {
+  document.getElementById("programme").scrollIntoView({ behavior: "smooth" });
+};
+
+const burger = document.querySelector(".burger");
+const menu = document.querySelector(".menu");
+
+burger.addEventListener("click", () => {
+  menu.classList.toggle("open");
+});
+
 });

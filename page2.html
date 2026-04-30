@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name = "viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Entretiens</title>
+    <title>Journée des Projets</title>
 
         <link rel="stylesheet" href="page2.css">
+        <link rel="stylesheet" href="page2resp.css" media="screen and (max-width: 1024px)">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
         <link rel="icon" href="images/favicon.ico">
@@ -43,10 +44,6 @@
             <i class="fa-solid fa-calendar"></i> Programme
           </li>
 
-          <li class="nav-participants">
-            <i class="fa-solid fa-users"></i> Participants
-          </li>
-
           <li class="nav-plan">
             <i class="fa-solid fa-map"></i> Plan
           </li>
@@ -69,6 +66,7 @@
 
 
     <div class="content">
+      <button class="burger">☰</button>
       <section class="hero" id="accueil">
         <div class="hero-text">
           <h1>Bienvenue à la<br>Journée des Projets !</h1>  
@@ -90,26 +88,26 @@
         
         <div class="carte">
           <img src="images/otto.png" alt="">
-          <h3>Projet 1</h3>
-          <p>Description du projet.</p>
+          <h3>Projet 1ère année</h3>
+           
         </div>
 
         <div class="carte">
           <img src="images/mtd.png" alt="">
-          <h3>Projet 2</h3>
-          <p>Description du projet.</p>
+          <h3>Projet 2ème année</h3>
+           
         </div>
 
         <div class="carte">
           <img src="images/PI3.png" alt="">
-          <h3>Projet 3</h3>
-          <p>Description du projet.</p>
+          <h3>Projet 3ème année</h3>
+           
         </div>
 
         <div class="carte">
           <img src="images/PI4.png" alt="">
-          <h3>Projet 4</h3>
-          <p>Description du projet.</p>
+          <h3>Projet 4ème année</h3>
+           
         </div>
 
       </section>
@@ -258,8 +256,68 @@
 
 
 
-    </div>
+
+    <section class="programme" id="programme">
+
+      <h2><i class="fa-solid fa-calendar"></i> Programme</h2>
+
+      <!-- filtres -->
+      <div class="filtres">
+        <span class="filtre active">Tous</span>
+        <span class="filtre">Présentations</span>
+        <span class="filtre">Compétitions</span>
+        <span class="filtre">Ateliers</span>
+      </div>
+
+      <!-- timeline -->
+      <div class="timeline">
+
+        <div class="event rouge">
+          <span class="heure">08:30</span>
+          <div class="contenu-event">
+            <h3>Ouverture</h3>
+            <p>Accueil des participants</p>
+          </div>
+        </div>
+
+        <div class="event bleu">
+          <span class="heure">09:00</span>
+          <div class="contenu-event">
+            <h3>Conférence</h3>
+            <p>Innovation et projets</p>
+          </div>
+        </div>
+
+        <div class="event vert">
+          <span class="heure">10:00</span>
+          <div class="contenu-event">
+            <h3>Projets 1A</h3>
+            <p>Présentation Otto</p>
+          </div>
+        </div>
+
+        <div class="event orange">
+          <span class="heure">11:30</span>
+          <div class="contenu-event">
+            <h3>Compétition</h3>
+            <p>Ottolympiades</p>
+          </div>
+        </div>
+
+        <div class="event violet">
+          <span class="heure">13:00</span>
+          <div class="contenu-event">
+            <h3>Pause</h3>
+            <p>Repas & échanges</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
 </div> 
+
+
   <footer class="footer">
     Tous droits réservés luk-charp
   </footer>

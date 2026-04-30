@@ -1,0 +1,136 @@
+@media (max-width: 1024px) {
+
+  /* MENU CACHE */
+  .menu {
+    position: fixed;
+    left: -260px;
+    transition: 0.3s;
+    z-index: 2000;
+    pointer-events: none;
+    opacity: 0;
+
+  }
+
+  .menu.open {
+    left: 0;
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .menu.open ~ .content .burger {
+  display: none;
+}
+
+  /* CONTENU */
+  .content {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  /* HERO */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-image img {
+    width: 180px;
+    margin-top: 20px;
+  }
+
+  /* CARTES */
+  .cartes {
+    flex-direction: column;
+    margin: 20px 10px;
+  }
+
+  .carte {
+    flex: 1 1 100%;
+  }
+
+  /* PROGRAMME */
+  .programme {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .event {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .heure {
+    margin-bottom: 5px;
+  }
+
+.burger {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 3000;
+
+  background: #d61f1f;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+  /* FOOTER */
+  .footer {
+    left: 0;
+    width: 100%;
+  }
+
+}
+
+/* Ajout de styles pour les écrans de moins de 768px */
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 20px;
+  }
+
+  .hero-image img {
+    width: 150px;
+  }
+
+  .cartes {
+    margin: 10px 5px;
+  }
+}
+
+/* Ajout de styles pour les écrans de moins de 480px */
+@media (max-width: 480px) {
+  .menu {
+    font-size: 14px;
+  }
+
+  .hero-text h1 {
+    font-size: 18px;
+  }
+
+  .hero-image img {
+    width: 120px;
+  }
+
+  .cartes {
+    margin: 5px;
+  }
+}

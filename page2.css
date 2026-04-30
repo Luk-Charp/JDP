@@ -227,6 +227,10 @@ header {
   padding: 15px;
   flex: 1 1 calc(25% - 20px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* clé pour aligner */
   text-align: center;
 }
 
@@ -304,6 +308,101 @@ header {
 .toggle.ferme::before {
   transform: rotate(-45deg);
 }
+
+.programme {
+  margin: 40px 30px;
+  background: #fafafa;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.programme h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* filtres */
+.filtres {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filtre {
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: #eee;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.filtre.active {
+  background: #d61f1f;
+  color: white;
+}
+
+/* timeline */
+.timeline {
+  position: relative;
+  border-left: 3px solid #ddd;
+  padding-left: 20px;
+}
+
+.event {
+  display: flex;
+  margin-bottom: 25px;
+  position: relative;
+  align-items: center; /* 🔥 correction clé */
+  
+}
+
+.event::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 50%; /* clé */
+  transform: translateY(-50%); /* centre parfaitement */
+
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #d61f1f;
+}
+
+/* heure */
+.heure {
+  width: 70px;
+  font-weight: bold;
+  color: #555;
+  margin-left: 10px;
+}
+
+/* carte */
+.contenu-event {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  flex: 1;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.contenu-event h3 {
+  margin-bottom: 5px;
+}
+
+.contenu-event p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* couleurs catégories */
+.rouge::before { background: #e53935; }
+.bleu::before { background: #1e88e5; }
+.vert::before { background: #43a047; }
+.orange::before { background: #fb8c00; }
+.violet::before { background: #8e24aa; }
 
 
 .footer {
