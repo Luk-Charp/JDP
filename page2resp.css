@@ -73,14 +73,19 @@
 
   /* FOOTER */
   .footer {
+    position: fixed;
     left: 0;
+    bottom: 0px;
     width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    line-height: 1;
   }
 
 /* NAVBAR MOBILE BAS */
 .bottom-nav {
   position: fixed;
-  bottom: 0;
+  bottom: 30px;
   left: 0;
   width: 100%;
 
@@ -117,7 +122,7 @@
 }
 
 .plan {
-  margin: 20px 10px;
+  margin: 20px 10px 0 10px; /* supprime la marge basse */
   padding: 15px;
 }
 
@@ -127,7 +132,7 @@
 
 /* espace pour éviter que ça cache le contenu */
 body {
-  padding-bottom: 70px;
+  padding-bottom: 80px;
 }
 
 }
